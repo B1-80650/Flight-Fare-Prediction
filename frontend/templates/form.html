@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Fare Predictor</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+     <style>
+        body {
+
+            background-image: url('/home/sunbeam/Desktop/image1.jpg');
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Fixed background */
+            }
+     </style>       
+       <div class="container">
+                <div class="textblock" style="width: 110%">
+                  <h1 align="center">Flight Fare Prediction Model</h1>
+                </div>
+            </div>
+    
+</head>
+<body background="/home/sunbeam/Desktop/DBDA_ClassData/2. Flight_fare_proj - ML project/frontend/templates/image1.jpg">
+    <div class="container mt-5">
+        <h3 class="text-center">Enter Details</h3>
+        <form method="POST"
+                    action="/classify">
+        <div class="row">
+            <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="airline">Airline</label>
+                        <select class="form-control" name="airline">
+                            <option value=0>Air India</option>
+                            <option value=1>Air Asia</option>
+                            <option value=2>Indigo</option>
+                            <option value=3>Spice Jet</option>
+                            <option value=4>Vistara</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="source_city">Source City</label>
+                        <select class="form-control" name="source_city">
+                            <option value=0>Bangalore</option>
+                            <option value=1>Chennai</option>
+                            <option value=2>Delhi</option>
+                            <option value=3>Hyderabad</option>
+                            <option value=4>Kolkata</option>
+                            <option value=5>Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="departure_time">Departure time</label>
+                        <select class="form-control" name="departure_time">
+                            <option value=0> Afternoon</option>
+                            <option value=1> Early Morning</option>
+                            <option value=2> Evening</option>
+                            <option value=3> Late Night</option>
+                            <option value=4> Morning</option>
+                            <option value=5> Night</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stops">Stops</label>
+                        <select class="form-control" name="stops">
+                            <option value=0>one</option>
+                            <option value=1>two_or_more</option>
+                            <option value=2>zero</option>
+                        </select>
+                    </div>
+
+
+
+
+
+
+
+            </div>
+            <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="flight_class">Class</label>
+                        <select class="form-control" name="flight_class">
+                            <option value=0>Business</option>
+                            <option value=1>Economy</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination_city">Destination City</label>
+                        <select class="form-control" name="destination_city">
+                            <option value=0>Bangalore</option>
+                            <option value=1>Chennai</option>
+                            <option value=2>Delhi</option>
+                            <option value=3>Hyderabad</option>
+                            <option value=4>Kolkata</option>
+                            <option value=5>Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrival_time">Arrival Time</label>
+                        <select class="form-control" name="arrival_time">
+                            <option value=0> Afternoon</option>
+                            <option value=1> Early Morning</option>
+                            <option value=2> Evening</option>
+                            <option value=3> Late Night</option>
+                            <option value=4> Morning</option>
+                            <option value=5> Night</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="days_left">Days Left</label>
+                        <input type="number" class="form-control" name="days_left" placeholder="Enter Days left for flight">
+                    </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button id="submit-button" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+        </form>
+<!--         <div class="container mt-5">-->
+<!--        -->
+<!--            <img src="/home/apurva/Desktop/JB/pqr.jpeg" alt="Healthy Image" class="img-fluid" style="max-width:50px;" align= "right">-->
+<!--       -->
+    </div>
+    </div>
+     <script>
+    // Get a reference to the submit button by its id
+    const submitButton = document.getElementById('submit-button');
+
+    // Add a click event listener to the button
+    submitButton.addEventListener('click', function(event) {
+       
+        
+        // Define the URL of the new webpage you want to open
+        //const newPageUrl = 'file:///home/apurva/Desktop/JB/1result.html'; // Replace with your desired URL
+        const newPageUrl = 'file:///home/sunbeam/Desktop/DBDA_ClassData/2.Flight_fare_proj-MLproject/frontend/templates/confirmPage.html';
+        // Redirect to the new webpage
+        window.location.href = newPageUrl;
+        
+    });
+</script>
+
+    <!-- Include Bootstrap JS and jQuery for dropdown functionality (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
+
